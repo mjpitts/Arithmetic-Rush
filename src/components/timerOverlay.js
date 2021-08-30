@@ -20,11 +20,15 @@ export function BeginningTimer(props){
 
 
         const tick = () => {  
-                setTime(secs - 1);
+                setTime(3);
                 
                 if(props.begin === true && trigger !== true){
-                    setTime(3)
+                    setTime(2)
                     setTrigger(true)
+                }
+
+                if(props.begin === true && trigger === true){
+                    setTime(secs-1)
                 }
 
                 if(secs==='Go!'){
