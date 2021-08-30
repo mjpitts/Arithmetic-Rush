@@ -82,7 +82,6 @@ export function AddSubPage(currentProblem, currentAnswer){
     <div className="desk-background">    
     <div className="menu-container">
         <div className='countdownTimer'>
-            <div></div>
             <h1 style={{fontSize:'4rem'}}>{33-count}</h1> 
         </div>
         <div className="page-layout">
