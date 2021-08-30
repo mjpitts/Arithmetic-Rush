@@ -15,7 +15,8 @@ export function AddSub() {
 
 //export the multiply and divide page
 export function MultDiv() {
-    return (MultDivPage())
+    let [problem,answer] = generateProblem("multiply", 1)
+    return (MultDivPage(problem, answer))
 }
 
 //export the exponent page
