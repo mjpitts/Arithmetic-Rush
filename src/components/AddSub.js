@@ -43,6 +43,8 @@ export function AddSubPage(currentProblem, currentAnswer){
         setCorrect(0)
         setError(0)
         setEnd(false)
+        setStart(true)
+        setTimer(false)
     }
 
     function startTimer(){
