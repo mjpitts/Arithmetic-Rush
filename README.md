@@ -1,2 +1,2 @@
 # Arithmetic-Rush
-An original math game made by me target towards a younger audience. 
+An original math game made by me targeted towards a younger audience. 
