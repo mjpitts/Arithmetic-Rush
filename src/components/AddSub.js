@@ -16,7 +16,30 @@ export function AddSubPage(currentProblem, currentAnswer){
     const [answer, setAnswer] = useState(currentAnswer)
     const [end, setEnd] = useState(false)
     const [start, setStart] = useState(true)
-    const [timer, setTimer] = useState(false) 
+    const [timer, setTimer] = useState(false)
+    const [count, setCount] = useState(0) 
+
+    //Game timer that counts down from 30, once timer goes past
+    // 0 time is up
+        const tick = () => {  
+            if( timer === true && start === false  && end === false){
+                setCount(1+count)
+                
+            }
+    };
+      
+   React.useEffect(() => {
+        const timerId = setInterval(() => tick(), 1000);
+        return () => clearInterval(timerId);
+    });
+    
+    //sets timer up for 30 seconds. the additional 3 seconds
+    //come from the beginning timer.
+    if( count > 33 && end === false){
+        setError(3)
+        setEnd(true)
+    }
+
 
     //handles the score and reloads a new problem on submit
     function handleSubmit(e) { 
@@ -45,6 +68,7 @@ export function AddSubPage(currentProblem, currentAnswer){
         setEnd(false)
         setStart(true)
         setTimer(false)
+        setCount(0)
     }
 
     function startTimer(){
@@ -57,6 +81,10 @@ export function AddSubPage(currentProblem, currentAnswer){
     <>
     <div className="desk-background">    
     <div className="menu-container">
+        <div className='countdownTimer'>
+            <div></div>
+            <h1 style={{fontSize:'4rem'}}>{33-count}</h1> 
+        </div>
         <div className="page-layout">
         <h1 className="problem-header">Time to Add And Subtract</h1>
         <Link to="/" className="home-button">Home</Link>
