@@ -30,6 +30,30 @@ let opperators = ["+", " - ", "x" , "/", "^" ]
     
         case "multiply":
             
+            left = getRandomInt(10 * difficulty)
+            right = getRandomInt(5)
+            middle = opperators[getRandomInt(2) + 2]
+            answer = 0
+            //too many zero zero situations
+            if(left === 0 && right === 0){
+               right = getRandomInt(5)
+               left = getRandomInt(10 * difficulty + -6)
+            }
+            //prevent divide by zero and too many easy mult or div by 1
+            if(right === 0 || right === 1){
+                right = right + 4
+            }
+            //prevent dividing by harder to calculate numbers like 3
+            if(right === 3){
+                right = right + 1 
+            }
+
+            if(middle === "x"){
+                answer = left * right
+            } else {
+                answer = left/right
+            }
+    
             return ( <h1>{getRandomInt(10 * difficulty)} {opperators[getRandomInt(2) + 2]} {getRandomInt(10)}</h1>)
 
         case "expo":
