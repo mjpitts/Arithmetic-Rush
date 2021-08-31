@@ -21,7 +21,7 @@ export function EndgameOverlay(props) {
 
         return(
             <div className={name}>
-            <h1 className="end-header">You Won</h1>
+            <h1 className="end-header" style={{fontSize: '10rem'}}>You Won</h1>
             <button ref={resetButtonRef} className="reset-button" onClick={props.resetGame} >Reset</button>
             </div>)
 
@@ -29,7 +29,7 @@ export function EndgameOverlay(props) {
 
         return(
             <div className={name}>
-            <h1 className="end-header">You Lost</h1> 
+            <h1 className="end-header" style={{fontSize: '10rem'}}>You Lost</h1> 
             <button ref={resetButtonRef} className="reset-button" onClick={props.resetGame} >Reset</button>
             </div>)
 
