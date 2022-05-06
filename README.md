@@ -6,7 +6,7 @@ framework.
 
 **To get up and running with this project:**
 
-make sure you have an up to date copy of git and node.js installed.
+make sure you have an up to date copy of git, REact.js and node.js installed.
 
 npm install to initialize. 
 
