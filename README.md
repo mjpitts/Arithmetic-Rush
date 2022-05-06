@@ -1,6 +1,8 @@
 # Arithmetic-Rush
 An original math game made by me targeted towards a younger audience. 
 This game is meant to be run a fully extended browser window on a medium screen. 
+This game was built purely with React as an effort to increase my comfort with the 
+framework.
 
 **To get up and running with this project:**
 
